@@ -1,5 +1,6 @@
 package com.github.verhagen.mrrs.repository;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +39,10 @@ public class RoomRepository {
 		}
 
 		return rooms.get(locationCln);
+	}
+
+	public Collection<Room> getAll() {
+		return rooms.values();
 	}
 
 }
