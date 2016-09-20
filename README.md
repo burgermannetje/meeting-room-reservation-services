@@ -4,3 +4,14 @@
 # Meeting Room Reservation Services
 
 __INFO__ This project is based on the [Meeting Room Reservation System - Blog](http://meeting-room-reservation-group.github.io/)
+
+
+# Development
+
+## Running on Jetty
+
+	http://localhost:8080/
+
+	http://localhost:8080/webapi/users
+	http://localhost:8080/webapi/users/query?name=Tintin
+	http://localhost:8080/webapi/users/query?name=captain%20haddock

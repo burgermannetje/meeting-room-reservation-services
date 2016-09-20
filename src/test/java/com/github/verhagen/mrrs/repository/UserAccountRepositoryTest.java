@@ -12,7 +12,9 @@ public class UserAccountRepositoryTest {
 	public void create() throws Exception {
 		UserAccountRepository repo = new UserAccountRepository();
 		repo.add(createUserAccount("tintin", "Tintin"));
-		repo.add(createUserAccount("snowy", "Snowy"));
+		repo.add(createUserAccount("haddock", "Captain Haddock"));
+//		repo.add(createUserAccount("calculus", "Professor Calculus"));
+//		repo.add(createUserAccount("thomson", "Thomson and Thompson"));
 
 		assertEquals(2, repo.size());
 		UserAccount userAccount = repo.search("Tintin");
