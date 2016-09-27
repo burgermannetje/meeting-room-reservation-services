@@ -1,8 +1,8 @@
 package com.github.verhagen.mrrs.domain;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
+import java.util.LinkedHashSet;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -64,7 +64,7 @@ public class RoomTest {
 		String name = "Moscow";
 		String location = "02.04";
 		int capacity = 10;
-		Set<Facility> facilities = new HashSet<>();
+		Set<Facility> facilities = new LinkedHashSet<>();
 		Facility whiteboard = new Facility("whiteboard");
 		facilities.add(whiteboard);
 		facilities.add(new Facility("beamer"));
@@ -75,8 +75,7 @@ public class RoomTest {
 		assertEquals(capacity, room.getCapacity());
 		assertEquals(facilities, room.getFacilities());
 		assertEquals(2, room.getFacilities().size());
-		assertTrue(room.getFacilities().contains(""));
-		assertEquals("Moscow, 02.04, 10, [ beamer, whiteboard ]", room.toString());
+		assertEquals("Moscow, 02.04, 10, [ whiteboard, beamer ]", room.toString());
 	}
 
 }
